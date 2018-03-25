@@ -33,10 +33,17 @@ namespace SorteioGrupos
                 
                 for (int i = 0; i < qtd; i++)
                 {
+                    //Sorteio laringe d
                     if(r.Next(2) == 1)
-                        lbGrupoA.Items.Add("Laringe " + i);
+                        lbGrupoA.Items.Add("Laringe " + (i+1) + "D");
                     else
-                        lbGrupoB.Items.Add("Laringe " + i);
+                        lbGrupoB.Items.Add("Laringe " + (i + 1) + "D");
+
+                    //Sorteio laringe e
+                    if (r.Next(2) == 1)
+                        lbGrupoA.Items.Add("Laringe " + (i + 1) + "E");
+                    else
+                        lbGrupoB.Items.Add("Laringe " + (i + 1) + "E");
                 }
 
                 chartEst.Series.Clear();
